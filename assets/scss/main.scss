@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green:hsl(150, 100%, 66%);
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+
+body {
+  font-size: 28px;
+  font-family: "Manrope", sans-serif;
+}
+.bg {
+  background-color: $Dark-Blue;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: $Dark-Grayish-Blue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: $Light-Cyan;
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.card__advice--id {
+  color: hsl(150, 100%, 66%);
+  font-size: 18px;
+  font-weight: 500;
+}
+.card__advice--id span {
+  letter-spacing: 2px;
+}
+.card__advice--content {
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.dice {
+  position: relative;
+  margin-top: 1rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+.dice:hover .circle {
+  box-shadow: 1px 1px 10px $Neon-Green;
+}
+
+.dice__img {
+  position: absolute;
+  bottom: -54px;
+  left: -16px;
+  width: 32px;
+  height: 32px;
+}
+
+.circle {
+  position: absolute;
+  bottom: -70px;
+  left: -32px;
+  background-color: $Neon-Green;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  transition: all ease-in-out 0.3s;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 4rem;
+  color: $Grayish-Blue;
+}
+.attribution a {
+    color: $Light-Cyan;
+  
+}
+
+@media screen and (min-width: 700px) {
+  .card {
+    max-width: 600px;
+  }
+}

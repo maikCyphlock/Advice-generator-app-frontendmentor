@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 28px;
+  font-family: "Manrope", sans-serif;
+}
+
+.bg {
+  background-color: #1f2632;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: #323a49;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #cee3e9;
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all ease .3s;
+}
+
+.card__advice--id {
+  color: #52ffa8;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card__advice--id span {
+  letter-spacing: 2px;
+}
+
+.card__advice--content {
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.dice {
+  position: relative;
+  margin-top: 1rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dice:hover .circle {
+  -webkit-box-shadow: 1px 1px 10px #52ffa8;
+          box-shadow: 1px 1px 10px #52ffa8;
+}
+.dice:hover .dice__img {
+  
+  transform: scale(1.2) ;
+}
+.dice .dice__img.active {
+  
+  transform: rotate(180deg);
+}
+.dice__img {
+  transition: all ease .5s;
+  position: absolute;
+  bottom: -54px;
+  left: -16px;
+  width: 32px;
+  height: 32px;
+}
+
+.circle {
+  position: absolute;
+  bottom: -70px;
+  left: -32px;
+  background-color: #52ffa8;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 4rem;
+  color: #4e5d73;
+}
+
+.attribution a {
+  color: #cee3e9;
+}
+
+@media screen and (min-width: 700px) {
+  .card {
+    max-width: 600px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
